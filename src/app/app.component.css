@@ -1,0 +1,68 @@
+.page { 
+    overflow: hidden;
+    /* background-image: url('/assets/background.jpg'); */
+       
+    /* animation-name: MOVE-BG; */
+    animation-duration: 50s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    height: 100vh;
+    position: relative;
+}
+
+.isDead {
+    background-color: red;
+}
+
+.isAlive {
+    background-color: white;
+}
+
+img { 
+    height: 100px;
+    position: absolute; 
+    top: 350px;
+}
+.manDiv{ 
+    height: 500px;
+    border: 2px solid black;
+    z-index: -1;
+}
+.man {
+    background-image: url('/assets/man.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 200px;
+    position: relative;
+    top: 300px;
+    transition: 0.3s;
+   
+}
+.jump{
+    top: 0;
+    transition: 0.3s;
+}
+
+.thing {
+    position:absolute;
+
+}
+
+
+@keyframes MOVE-BG {
+    from {
+      -webkit-transform: translateX(100%);
+    }    
+    to { 
+      -webkit-transform: translateX(-187%);
+    }
+ }
+ 
+
+
+@keyframes jump {
+    0%   { top: 0px; }
+    50%  { top: 100px; }
+    100%  { top: 0px; }
+  }
+

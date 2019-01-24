@@ -1,0 +1,22 @@
+<div class="page {{(manIsHit) ? 'isDead' : 'isAlive' }}">
+        <div>
+            <div *ngFor="let obstacle of obstacles" class="thing" [ngStyle]="{'left.px':obstacle.pos}">
+                    <h1>{{jumping}}</h1> 
+                <img src='/assets/sponge.gif '> 
+            </div>
+        
+        
+               
+            <div class="manDiv">
+                
+                
+                <div class="man {{(jumping) ? 'jump' : ' '}}">
+                
+                </div>
+            </div>
+        </div>
+</div>
+
+<router-outlet></router-outlet>
+
+
